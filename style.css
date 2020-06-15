@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+body {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  background: #e5eff5;
+}
+
+h1 {
+  color: #2ab2af;
+  font-weight: 700;
+}
+
+h2 {
+  color: #c0df34;
+  font-weight: 700;
+}
+
+h3 {
+  color: white;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.5;
+}
+
+article {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 55%;
+  margin: auto;
+  box-shadow: 0 4px 4px 0 #98a6bd, 0 6px 15px 0 #98a6bd;
+  border-radius: 15px;
+  background: white;
+}
+article header {
+  grid-column: 1/span 2;
+  padding: 20px 40px;
+  background: white;
+  border-radius: 15px 15px 0 0;
+}
+article .container {
+  background: #2ab2af;
+  padding: 20px 40px;
+  color: white;
+}
+article .subscriptions {
+  border-radius: 0 0 0 15px;
+}
+article .subscriptions button {
+  background: #c0df34;
+  border: 1px solid #2ab2af;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+}
+article .subscriptions button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+article .subscriptions strong {
+  font-size: 40px;
+}
+article .why-us {
+  opacity: 80%;
+  border-radius: 0px 0 15px 0;
+}
+article .why-us ul {
+  list-style: none;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media only screen and (max-width: 730px) {
+  article {
+    grid-template-columns: auto;
+    width: 90%;
+  }
+  article header {
+    grid-column: 1;
+  }
+  article .container {
+    grid-column: 1;
+    border-radius: 0 0 0 0;
+  }
+  article .why-us {
+    border-radius: 0 0 15px 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

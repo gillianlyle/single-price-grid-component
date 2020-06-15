@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+$cyan:hsl(179, 62%, 43%);
+$bright-yellow:hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue:hsl(218, 22%, 67%);
+$white: hsl(0,100%,100%);
+
+body {
+    font-size:16px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    background: $light-gray;
+}
+
+h1 {
+    color: $cyan;
+    font-weight: 700;
+}
+
+h2 {
+    color: $bright-yellow;
+    font-weight: 700;
+}
+
+h3 {
+    color: $white;
+    font-weight: 700;
+}
+
+p { 
+    line-height: 1.5;
+}
+
+article {
+    display:grid;
+    grid-template-columns: auto auto;
+    width:55%;
+    margin:auto;
+    box-shadow: 0 4px 4px 0 $grayish-blue, 0 6px 15px 0 $grayish-blue;
+    border-radius:15px;
+    background:$white;
+
+    header {
+        grid-column: 1 / span 2;
+        padding:20px 40px;
+        background:$white;
+        border-radius:15px 15px 0 0;
+    }
+
+    .container {
+        background: $cyan;
+        padding:20px 40px;
+        color: $white;
+    }
+
+    .subscriptions {
+        border-radius:0 0 0 15px;
+
+        button {
+            background: $bright-yellow;
+            border:1px solid $cyan;
+            border-radius: 5px;
+            width:100%;
+            padding:15px;
+            color:$white;
+            box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            opacity: 0.9;
+            cursor: pointer;
+        }
+
+        strong {
+            font-size:40px
+        }
+    }
+
+    .why-us {
+        opacity: 80%;
+        border-radius:0px 0 15px 0 ;
+
+        ul {
+            list-style: none;
+            padding:0;
+            line-height: 1.5;
+        }
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width:730px){
+    article {
+        grid-template-columns: auto;
+        width:90%;
+
+        header {
+            grid-column: 1;
+        }
+
+        .container {
+            grid-column: 1;
+            border-radius:0 0 0 0;
+        }
+
+        .why-us {
+            border-radius: 0 0 15px 15px;
+        }
+    }
+}
